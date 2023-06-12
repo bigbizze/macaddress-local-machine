@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": false,
+    "jsx": "react",
+    "lib": [
+      "es2022"
+    ],
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strict": true,
+    "target": "es2022",
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ],
+    "outDir": "./lib/"
+  },
+  "compileOnSave": false,
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "./types",
+    "tests"
+  ]
+}
