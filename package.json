@@ -1,6 +1,6 @@
 {
   "name": "macaddress-local-machine",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "author": "bigbizze",
   "license": "MIT",
   "main": "lib/index.js",
@@ -53,5 +53,8 @@
     "ts-jest": "^29.0.3",
     "ts-node": "latest",
     "typescript": "latest"
+  },
+  "peerDependencies": {
+    "@types/node": "latest"
   }
 }
