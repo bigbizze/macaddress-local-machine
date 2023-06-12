@@ -1,15 +1,38 @@
 {
   "name": "macaddress-local-machine",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.3",
+  "author": "bigbizze",
+  "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"
   },
-  "author": "bigbizze",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigbizze/macaddress-local-machine"
+  },
+  "keywords": [
+    "mac",
+    "mac address",
+    "network interface",
+    "network",
+    "os",
+    "node.js",
+    "node",
+    "hardware",
+    "ethernet",
+    "wi-fi",
+    "local machine",
+    "interface",
+    "networking",
+    "connectivity",
+    "IP",
+    "network utilities",
+    "hardware address",
+    "physical address"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.10.3",

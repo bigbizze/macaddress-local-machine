@@ -1,8 +1,8 @@
 import os from "os";
 
 interface MACAddress {
-  interface: string,
-  mac: string
+  iface: string,
+  macAddr: string
 }
 
 function createMacAddressGetter(all: true, throwErrorIfNoneFound: boolean): MACAddress[];
@@ -23,8 +23,8 @@ function createMacAddressGetter(all: boolean, throwErrorIfNoneFound: boolean): (
     for (const interfaceInfo of networkInterface) {
       if (!interfaceInfo.internal) {
         const address: MACAddress = {
-          interface: interfaceKey,
-          mac: interfaceInfo.mac
+          iface: interfaceKey,
+          macAddr: interfaceInfo.mac
         };
         if (!all) {
           return address;
@@ -37,6 +37,8 @@ function createMacAddressGetter(all: boolean, throwErrorIfNoneFound: boolean): (
   }
   if (throwErrorIfNoneFound && !macAddresses?.length) {
     throw new Error("No local MAC addresses found");
+  } else if (all && macAddresses === undefined) {
+    return [];
   }
   return macAddresses;
 }
@@ -46,7 +48,8 @@ export function all(throwErrorIfNoneFound = true): MACAddress[] {
 }
 
 export function first(throwErrorIfNoneFound: false): MACAddress | undefined;
-export function first(throwErrorIfNoneFound: true): MACAddress;
+export function first(throwErrorIfNoneFound?: true): MACAddress;
+export function first(throwErrorIfNoneFound?: undefined): MACAddress;
 export function first(throwErrorIfNoneFound: boolean = true): MACAddress | undefined {
   if (throwErrorIfNoneFound) {
     return createMacAddressGetter(false, true);
