@@ -23,6 +23,7 @@
       "./types",
       "./node_modules/@types"
     ],
+    "types": [ "node" ],
     "outDir": "./lib/"
   },
   "compileOnSave": false,
